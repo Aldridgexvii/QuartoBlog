@@ -1,0 +1,70 @@
+---
+title: "Exploring the chicks weight"
+author: "Aldridge"
+date: "2023-12-28"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+```{r}
+#| echo: false
+#| message: false
+library(ggplot2)
+library(dplyr)
+library(gt)
+library(plotly)
+```
+
+## Introduction
+
+This is a post explores weight versus age of chicks on different diets. The body weights of the chicks were measured at birth and every second day thereafter until day 20. They were also measured on day 21. There were four groups on chicks on different protein diets.
+
+| Data   | Definition                                                                                                                                                                                                                                   |
+|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Weight | A numeric vector giving the body weight of the chick (gm).                                                                                                                                                                                   |
+| Time   | A numeric vector giving the number of days since birth when the measurement was made.                                                                                                                                                        |
+| Chick  | An ordered factor with levels 18 \< … \< 48 giving a unique identifier for the chick. The ordering of the levels groups chicks on the same diet together and orders them according to their final weight (lightest to heaviest) within diet. |
+| Diet   | A factor with levels 1, …, 4 indicating which experimental diet the chick received.                                                                                                                                                          |
+
+: Data Dictionary
+
+```{r}
+#| echo: false
+df = ChickWeight
+head(df)
+
+#num_chicks = 6
+img_000 = df|>
+  #filter(as.numeric(Chick)< num_chicks)|>
+  ggplot() +
+ aes(x = Time, y = weight, colour = Chick) +
+ geom_line() +
+ scale_color_hue(direction = 1) +
+ labs(title = "Chicks Weight over time", color = "number of chicks") +
+ theme_minimal()
+  
+
+ggplotly(img_000)
+```
+
+```{r}
+img_001 = ggplot(df) +
+ aes(x = Diet, y = weight) +
+ geom_boxplot(fill = "#678DD2") +
+ labs(title = "Weight and Diet Distribution", color = "number of chicks") +
+ theme_minimal()
+
+ggplotly(img_001)
+```
+
+```{r}
+img_002 = ggplot(df) +
+ aes(x = Time, y = weight, fill = Diet) +
+ geom_area() +
+ scale_fill_brewer(palette = "GnBu", 
+ direction = 1) +
+  labs(title = "Chicks Diet over time", color = "number of chicks") +
+ theme_minimal()
+#
+ggplotly(img_002)
+```

@@ -1,0 +1,12 @@
+---
+title: "Blog Introduction"
+author: "Aldridge M"
+date: "2023-12-25"
+categories: [news]
+---
+
+Welcome to my project gallery for all things data science.
+
+![](thumbnail.jpg)
+
+Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.

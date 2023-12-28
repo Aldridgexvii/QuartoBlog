@@ -1,0 +1,3 @@
+"0","#| echo: false"
+"0","df = ChickWeight"
+"0","head(df)"

@@ -1,0 +1,7 @@
+"0","img_001 = ggplot(df) +"
+"0"," aes(x = Diet, y = weight) +"
+"0"," geom_boxplot(fill = ""#678DD2"") +"
+"0"," labs(title = ""Weight and Diet Distribution"", color = ""number of chicks"") +"
+"0"," theme_minimal()"
+"0",""
+"0","ggplotly(img_001)"

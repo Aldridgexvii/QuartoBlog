@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Blog Introduction",
+    "section": "",
+    "text": "Welcome to my project gallery for all things data science.\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Analytics Project Gallery",
+    "section": "",
+    "text": "Exploring the chicks weight\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 28, 2023\n\n\nAldridge M.\n\n\n\n\n\n\n  \n\n\n\n\nBlog Introduction\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 25, 2023\n\n\nAldridge M\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Exploring the chicks weight",
+    "section": "",
+    "text": "This is a post explores weight versus age of chicks on different diets. The body weights of the chicks were measured at birth and every second day thereafter until day 20. They were also measured on day 21. There were four groups on chicks on different protein diets.\n\nData Dictionary\n\n\n\n\n\n\nData\nDefinition\n\n\n\n\nWeight\nA numeric vector giving the body weight of the chick (gm).\n\n\nTime\nA numeric vector giving the number of days since birth when the measurement was made.\n\n\nChick\nAn ordered factor with levels 18 &lt; … &lt; 48 giving a unique identifier for the chick. The ordering of the levels groups chicks on the same diet together and orders them according to their final weight (lightest to heaviest) within diet.\n\n\nDiet\nA factor with levels 1, …, 4 indicating which experimental diet the chick received.\n\n\n\n\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\n\n\n\n\n\nimg_001 = ggplot(df) +\n aes(x = Diet, y = weight) +\n geom_boxplot(fill = \"#678DD2\") +\n labs(title = \"Weight and Diet Distribution\", color = \"number of chicks\") +\n theme_minimal()\n\nggplotly(img_001)\n\n\n\n\n\n\nimg_002 = ggplot(df) +\n aes(x = Time, y = weight, fill = Diet) +\n geom_area() +\n scale_fill_brewer(palette = \"GnBu\", \n direction = 1) +\n  labs(title = \"Chicks Diet over time\", color = \"number of chicks\") +\n theme_minimal()\n#\nggplotly(img_002)"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#introduction",
+    "href": "posts/post-with-code/index.html#introduction",
+    "title": "Exploring the chicks weight",
+    "section": "",
+    "text": "This is a post explores weight versus age of chicks on different diets. The body weights of the chicks were measured at birth and every second day thereafter until day 20. They were also measured on day 21. There were four groups on chicks on different protein diets.\n\nData Dictionary\n\n\n\n\n\n\nData\nDefinition\n\n\n\n\nWeight\nA numeric vector giving the body weight of the chick (gm).\n\n\nTime\nA numeric vector giving the number of days since birth when the measurement was made.\n\n\nChick\nAn ordered factor with levels 18 &lt; … &lt; 48 giving a unique identifier for the chick. The ordering of the levels groups chicks on the same diet together and orders them according to their final weight (lightest to heaviest) within diet.\n\n\nDiet\nA factor with levels 1, …, 4 indicating which experimental diet the chick received.\n\n\n\n\n\n  weight Time Chick Diet\n1     42    0     1    1\n2     51    2     1    1\n3     59    4     1    1\n4     64    6     1    1\n5     76    8     1    1\n6     93   10     1    1\n\n\n\n\n\n\n\nimg_001 = ggplot(df) +\n aes(x = Diet, y = weight) +\n geom_boxplot(fill = \"#678DD2\") +\n labs(title = \"Weight and Diet Distribution\", color = \"number of chicks\") +\n theme_minimal()\n\nggplotly(img_001)\n\n\n\n\n\n\nimg_002 = ggplot(df) +\n aes(x = Time, y = weight, fill = Diet) +\n geom_area() +\n scale_fill_brewer(palette = \"GnBu\", \n direction = 1) +\n  labs(title = \"Chicks Diet over time\", color = \"number of chicks\") +\n theme_minimal()\n#\nggplotly(img_002)"
+  }
+]

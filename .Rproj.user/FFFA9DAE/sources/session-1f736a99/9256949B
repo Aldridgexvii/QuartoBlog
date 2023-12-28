@@ -1,0 +1,31 @@
+{
+    "id": "9256949B",
+    "path": "~/GitHub/QuartoBlog/posts/post-with-code/index.qmd",
+    "project_path": "posts/post-with-code/index.qmd",
+    "type": "quarto_markdown",
+    "hash": "3059780017",
+    "contents": "",
+    "dirty": false,
+    "created": 1703777095410.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "529:0",
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1703777417,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1703777417830,
+    "read_only": false,
+    "read_only_alternatives": []
+}
